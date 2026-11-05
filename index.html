@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="BLF Hunting – håndlavede hunde- og jagtartikler i læder. Dansk håndværk fra Sønder Omme.">
+<title>BLF Hunting | Dansk håndværk til jagt og hund</title>
+<style>
+:root{--bg:#10120f;--panel:#191d17;--panel2:#20251e;--cream:#e9e3d4;--muted:#b7b4a8;--gold:#b99a65;--line:#353a30;--green:#59634b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(15,18,14,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-family:Georgia,serif;letter-spacing:2px;font-size:25px;font-weight:bold}.brand-mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:14px;letter-spacing:0}.brand small{display:block;font:9px Arial,sans-serif;color:var(--muted);letter-spacing:3px;margin-top:-4px}
+.site-logo{display:block;width:165px;height:auto;max-height:72px;object-fit:contain}nav{display:flex;align-items:center;gap:28px;font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#ddd8ca}nav a:hover,.active{color:var(--gold)}
+.login-open,.btn{border:1px solid var(--gold);background:transparent;color:var(--cream);padding:12px 18px;letter-spacing:1px;text-transform:uppercase;font-size:11px;cursor:pointer;transition:.2s}.login-open:hover,.btn:hover{background:var(--gold);color:#141610}
+.hero{min-height:650px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(8,10,8,.92),rgba(8,10,8,.48),rgba(8,10,8,.15)),url('hjort-ren.png') center/cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg),transparent 28%);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:650px;padding:100px 0}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:normal;line-height:1.15}h1{font-size:clamp(44px,7vw,82px);margin:18px 0}h1 em{color:var(--gold);font-style:normal}h2{font-size:clamp(32px,4vw,48px);margin:12px 0 22px}h3{font-size:23px;margin:10px 0}
+.hero p{font-size:17px;color:#d1cdbf;max-width:520px;margin:0 0 30px}.btn-fill{background:var(--gold);color:#171912}
+section{padding:92px 0}.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.intro-copy p,.value p,.gallery-intro p{color:var(--muted)}
+.photo{min-height:420px;background:url('https://blfhunting.dk/wp-content/uploads/2018/04/B%C3%A6lte-BLF-Hunting.jpg') center/cover;border:1px solid var(--line);position:relative}.photo:after{content:"BLF HUNTING · HÅNDLAVET I DANMARK";position:absolute;bottom:18px;left:18px;font-size:10px;letter-spacing:2px;background:#111d;padding:9px 12px}
+.values{background:#151913;border-block:1px solid var(--line)}.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:42px}.value{border-top:1px solid var(--gold);padding-top:22px}.value .num{font-family:Georgia,serif;color:var(--gold);font-size:30px}
+.gallery-intro{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gallery-card{height:270px;background:var(--panel2);overflow:hidden;position:relative;border:1px solid var(--line)}.gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gallery-card:hover img{transform:scale(1.04)}.gallery-card span{position:absolute;bottom:0;left:0;right:0;padding:28px 16px 14px;background:linear-gradient(transparent,#080a08dd);font-family:Georgia,serif;font-size:18px}
+.gallery-empty{grid-column:1/-1;padding:48px;text-align:center;border:1px dashed var(--line);color:var(--muted)}
+.contact{background:#151913;border-top:1px solid var(--line)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact-details{color:var(--muted)}.contact-details strong{color:var(--cream)}.contact-form{display:grid;gap:12px}.contact-form input,.contact-form textarea,.login-box input{background:#0f120e;border:1px solid var(--line);color:var(--cream);padding:14px;width:100%}.contact-form textarea{min-height:120px;resize:vertical}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:30;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modal-card{background:var(--panel);border:1px solid var(--gold);padding:30px;width:min(480px,100%);position:relative}.close{position:absolute;right:15px;top:10px;background:none;border:0;color:var(--cream);font-size:26px;cursor:pointer}.login-box{display:grid;gap:12px}.hint{font-size:12px;color:var(--muted)}.admin-tools{display:none;margin:0 0 25px;padding:20px;background:var(--panel);border:1px solid var(--gold)}.admin-tools.show{display:block}.admin-tools input{color:var(--muted)}.admin-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}.delete-photo{position:absolute;right:10px;top:10px;background:#6e3027;color:white;border:0;padding:7px 10px;cursor:pointer;display:none}.admin-on .delete-photo{display:block}.status{font-size:13px;color:var(--gold);min-height:20px}
+@media(max-width:760px){.nav{height:auto;min-height:76px;flex-wrap:wrap;padding:14px 0}nav{order:3;width:100%;overflow:auto;gap:20px;padding-bottom:6px}.login-open{margin-left:auto}.hero{min-height:560px}.intro-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.value-grid,.gallery-grid{grid-template-columns:1fr 1fr}.gallery-card{height:220px}.gallery-intro{display:block}}
+@media(max-width:480px){.value-grid,.gallery-grid{grid-template-columns:1fr}.gallery-card{height:260px}.brand{font-size:21px}}
+.hero{background-image:linear-gradient(90deg,rgba(8,10,8,.82),rgba(8,10,8,.68)),url('hjort-ren.png');background-position:center center}
+.hero-content{padding-top:130px}
+.craft-section{background:#191d17;border-top:1px solid var(--line)}.craft-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.craft-image{width:100%;display:block;object-fit:cover;border:1px solid var(--line)}.craft-copy p{color:var(--muted);font-size:17px}.craft-list{list-style:none;padding:0;margin:28px 0 0}.craft-list li{padding:7px 0;font-weight:bold;letter-spacing:.5px;text-transform:uppercase}.craft-list li:before{content:"✓";color:var(--gold);font-size:24px;margin-right:15px}@media(max-width:760px){.craft-grid{grid-template-columns:1fr;gap:30px}}
+.footer-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:28px}.footer-links a,.footer-links button{color:var(--cream);text-align:left;font-size:14px;background:none;border:0;padding:0;cursor:pointer}.footer-links a:hover,.footer-links button:hover{color:var(--gold)}.footer-note{color:var(--muted);font-size:11px;line-height:1.5;margin-top:8px}@media(max-width:760px){.footer-links{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:440px){.footer-links{grid-template-columns:1fr}}
+.catalog-filters{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.product-card{background:var(--panel);border:1px solid var(--line);overflow:hidden;position:relative}.product-card img{width:100%;height:220px;object-fit:cover;background:#2a2c25}.product-card .details{padding:18px}.product-card .cat{font-size:11px;color:var(--gold);letter-spacing:1px;text-transform:uppercase}.product-card h3{margin:6px 0}.product-card p{color:var(--muted);font-size:14px}.product-card .edit-product{display:none;position:absolute;top:10px;left:10px;background:var(--gold);border:0;color:#171912;padding:8px 12px;cursor:pointer;z-index:2}.admin-on .product-card .edit-product{display:block}.product-card .delete-photo{display:none}.admin-on .product-card .delete-photo{display:block}@media(max-width:800px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:500px){.product-grid{grid-template-columns:1fr}}
+.product-card .product-photo-button{display:block;width:100%;padding:0;border:0;background:none;cursor:pointer;position:relative}.product-photo-button img{display:block}.product-photo-button:after{content:"Se billeder";position:absolute;right:10px;bottom:10px;background:#151913e8;color:#fff;padding:5px 10px;font-size:12px}.product-viewer{display:none;position:fixed;inset:0;background:#000d;z-index:90;align-items:center;justify-content:center;padding:22px}.product-viewer.show{display:flex}.viewer-inner{position:relative;width:min(950px,100%);background:#191d17;border:1px solid var(--line);padding:20px}.viewer-image{width:100%;height:min(60vh,580px);object-fit:contain;background:#10120f}.viewer-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.viewer-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin:12px 0}.viewer-thumbs{display:flex;gap:9px;overflow-x:auto;padding:8px 0}.viewer-thumbs button{padding:0;background:none;border:2px solid transparent;cursor:pointer}.viewer-thumbs button.selected{border-color:var(--gold)}.viewer-thumbs img{width:78px;height:62px;object-fit:cover;display:block}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#top" aria-label="BLF Hunting – forside"><img class="site-logo" src="logo.png" alt="BLF Hunting logo"></a>
+<nav><a href="#top">Forside</a><a href="#om">Om os</a><a href="#galleri">Produktkatalog</a><a href="#forhandlere">Forhandlere</a><a href="#kontakt">Kontakt</a></nav>
+<button class="login-open" id="openLogin">Administrator login</button>
+</div></header>
+<main id="top">
+<div class="hero"><div class="wrap hero-content">
+<div class="eyebrow">Hunde- & jagtartikler i læder</div>
+<h1>Dansk håndværk.<br><em>Skabt til jagten.</em></h1>
+<p>Gennem mere end 30 år har BLF Hunting skabt håndlavede hunde- og jagtartikler med respekt for materialet, traditionerne og naturen.</p>
+<a class="btn btn-fill" href="#om">LÆR BLF HUNTING AT KENDE</a>
+</div></div>
+<section id="om"><div class="wrap intro-grid">
+<div class="intro-copy"><div class="eyebrow">Tradition · kvalitet · omtanke</div><h2>Håndværk med<br>rødder i Danmark</h2>
+<p>BLF Hunting er en familieejet virksomhed, der gennem mere end 30 år har specialiseret sig i hunde- og jagtartikler i læder.</p>
+<p>Vores produkter bliver udviklet og produceret efter gamle håndværkstraditioner på eget værksted i Sønder Omme. Vi er stolte af solidt håndværk og tilfredse kunder blandt både jægere og hundeførere.</p>
+<p>Vi anvender vegetabilske, biologisk nedbrydelige olier i garvningsprocessen og arbejder for at efterlade naturen i god stand til næste generation.</p>
+</div><div class="photo" role="img" aria-label="Håndlavet læderarbejde fra BLF Hunting"></div>
+</div></section>
+<section id="fremstilling" class="craft-section"><div class="wrap craft-grid">
+<div><img class="craft-image" src="fremstilling.png" alt="Håndværker syr en jagtrem i læder på værkstedet"></div>
+<div class="craft-copy"><div class="eyebrow">Færdigt arbejde</div><h2>Sådan arbejder vi</h2>
+<p>Få et helt unikt indblik i hvordan vi fremstiller jagtremme. Fra læder til færdigt produkt.</p>
+<ul class="craft-list"><li>Unikt design</li><li>Valgfri bagside</li><li>Dansk håndværk</li><li>Miljøvenlig fremstilling</li></ul>
+</div></div></section>
+<section class="values"><div class="wrap"><div class="eyebrow">Det står vi for</div><h2>Vores værdier</h2><div class="value-grid">
+<div class="value"><div class="num">01</div><h3>Kvalitet</h3><p>Vi går ikke på kompromis med materialer, nåle, tråde eller sting. Det gode håndværk kan ses og mærkes.</p></div>
+<div class="value"><div class="num">02</div><h3>Miljøvenligt</h3><p>Vi anvender vegetabilske olier, der er biologisk nedbrydelige, under garvningsprocessen.</p></div>
+<div class="value"><div class="num">03</div><h3>Unikt</h3><p>Personlige detaljer og valgmuligheder gør hvert stykke udstyr til noget særligt.</p></div>
+</div></div></section>
+<section id="galleri"><div class="wrap"><div class="eyebrow">Håndlavet i Danmark</div><h2>Produktkatalog</h2><p style="color:var(--muted)">Udforsk vores hunde- og jagtartikler. Produkterne købes hos BLF Huntings forhandlere – ingen webshop eller priser her.</p>
+<div class="catalog-filters" id="catalogFilters"><button class="btn btn-fill" data-filter="Alle">Alle produkter</button><button class="btn" data-filter="Hundeartikler">Hundeartikler</button><button class="btn" data-filter="Jagtartikler">Jagtartikler</button><button class="btn" data-filter="Schweissudstyr">Schweissudstyr</button><button class="btn" data-filter="Gaveartikler">Gaveartikler</button></div>
+<div class="admin-tools" id="adminTools"><strong>Administrer produktkatalog</strong><p class="hint">Vælg flere billeder med Ctrl/Shift, eller klik på Vælg billeder flere gange. Alle valgte billeder samles på ét produkt. Denne demo gemmer kun i din browser.</p><label for="productName">Produktnavn</label><input id="productName" placeholder="F.eks. Geværrem i læder" style="width:100%;padding:12px;background:#0f120e;color:white;border:1px solid var(--line)"><label for="productCategory">Kategori</label><select id="productCategory" style="width:100%;padding:12px;background:#0f120e;color:white;border:1px solid var(--line)"><option>Hundeartikler</option><option>Jagtartikler</option><option>Schweissudstyr</option><option>Gaveartikler</option></select><label for="photoCaption">Produktbeskrivelse</label><textarea id="photoCaption" rows="3" placeholder="Beskriv produktet..." style="width:100%;padding:12px;background:#0f120e;color:white;border:1px solid var(--line)"></textarea><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0"><label for="photoUpload" class="btn">Vælg billeder (flere ad gangen)</label><span id="chosenFileName" class="hint">Ingen billeder valgt</span></div><input id="photoUpload" type="file" accept="image/*" multiple style="position:absolute;width:1px;height:1px;opacity:0"><div id="existingImages" style="display:none;margin:12px 0"></div><div class="admin-actions"><button class="btn" id="cancelEdit" type="button" style="display:none">Annuller</button><button class="btn btn-fill" id="savePhoto">Tilføj produkt</button><button class="btn" id="logout">Log ud</button></div><div class="status" id="uploadStatus"></div></div>
+<div class="product-grid" id="galleryGrid"></div><p style="margin-top:30px"><a class="btn btn-fill" href="#forhandlere">Find en forhandler</a></p></div></section>
+<section id="forhandlere" class="values"><div class="wrap intro-grid"><div><div class="eyebrow">Find BLF Hunting i hele Danmark</div><h2>Vores forhandlere</h2><p>BLF Hunting kan købes hos forhandlere rundt om i Danmark. Find den nærmeste butik med den eksisterende forhandlersøgning.</p><p class="hint">Bemærk, at ikke alle forhandlere fører hele kollektionen.</p><a class="btn btn-fill" href="https://blfhunting.dk/forhandlere/" target="_blank" rel="noopener noreferrer">Find nærmeste forhandler ↗</a></div><div class="value"><div class="eyebrow">Bliv samarbejdspartner</div><h3>Vil du være forhandler?</h3><p>Har du en fysisk butik eller webshop og ønsker at forhandle BLF Huntings produkter? Kontakt os for at høre mere om mulighederne.</p><a class="btn" href="mailto:mail@blfhunting.dk?subject=Foresp%C3%B8rgsel%20om%20forhandlersamarbejde">Kontakt os om forhandling</a></div></div></section>
+<section class="contact" id="kontakt"><div class="wrap contact-grid">
+<div><div class="eyebrow">Vi er klar til at hjælpe</div><h2>Kontakt BLF Hunting</h2><div class="contact-details">
+<p><strong>BLF Hunting</strong><br>Møbjerggaard v/Morten Steen Hammershøj</p>
+<p>Brande Landevej 4<br>7260 Sønder Omme<br>CVR: 30095804</p>
+<p><strong>Telefon:</strong> <a href="tel:+4575334500">+45 75 33 45 00</a><br><strong>E-mail:</strong> <a href="mailto:mail@blfhunting.dk">mail@blfhunting.dk</a></p>
+<p class="hint">Kun administration. Intet salg fra adressen.</p>
+</div></div>
+<form class="contact-form" id="contactForm"><input required placeholder="Dit navn"><input type="email" required placeholder="Din e-mail"><textarea required placeholder="Skriv din besked"></textarea><button class="btn btn-fill" type="submit">Send e-mail</button><div class="hint" id="contactStatus">Kontaktformularen er en visuel demo og skal tilsluttes e-mail på webhotellet før brug.</div></form>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div class="footer-links">
+<button type="button" data-policy="Handelsbetingelser">Handelsbetingelser</button>
+<button type="button" data-policy="Cookie & Privatlivspolitik">Cookie &amp; Privatlivspolitik</button>
+<a href="#forhandlere">Bliv forhandler</a>
+
+</div><div class="footer-row"><span>© <span id="year"></span> BLF Hunting · Håndlavet i Danmark</span><span>Brande Landevej 4, 7260 Sønder Omme · +45 75 33 45 00</span></div></div></footer>
+<div class="modal" id="loginModal"><div class="modal-card"><button class="close" id="closeLogin" aria-label="Luk">×</button><div class="eyebrow">Kun for administrator</div><h2>Log ind</h2><form class="login-box" id="loginForm"><input id="username" autocomplete="username" placeholder="Brugernavn" required><input id="password" type="password" autocomplete="current-password" placeholder="Adgangskode" required><button class="btn btn-fill" type="submit">Log ind</button><div class="status" id="loginStatus"></div><div class="hint">Demo-login: admin / BLF2026</div></form></div></div>
+<div class="modal" id="policyModal"><div class="modal-card"><button class="close" id="closePolicy" aria-label="Luk">×</button><h2 id="policyTitle"></h2><p>Det oprindelige indhold skal overføres og gennemgås, før denne side offentliggøres. Kontakt <a href="mailto:mail@blfhunting.dk">mail@blfhunting.dk</a> for oplysninger.</p></div></div>
+<div class="product-viewer" id="productViewer" role="dialog" aria-modal="true" aria-label="Produktbilleder"><div class="viewer-inner"><div class="viewer-top"><h3 id="viewerTitle">Produktbilleder</h3><button class="btn" id="viewerClose" type="button">Luk ×</button></div><img class="viewer-image" id="viewerImage" alt="Produktbillede"><div class="viewer-controls"><button class="btn" id="viewerPrev" type="button">← Forrige</button><span id="viewerCount"></span><button class="btn" id="viewerNext" type="button">Næste →</button></div><div class="viewer-thumbs" id="viewerThumbs"></div></div></div>
+<script>
+document.querySelectorAll('[data-policy]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelector('#policyTitle').textContent=btn.dataset.policy;document.querySelector('#policyModal').classList.add('show')}));
+document.querySelector('#closePolicy').addEventListener('click',()=>document.querySelector('#policyModal').classList.remove('show'));
+document.querySelector('#policyModal').addEventListener('click',e=>{if(e.target.id==='policyModal')e.target.classList.remove('show')});
+
+const $=s=>document.querySelector(s);
+$('#year').textContent=new Date().getFullYear();
+const modal=$('#loginModal'), tools=$('#adminTools'), grid=$('#galleryGrid');
+let viewerImages=[],viewerIndex=0;
+function showViewer(){if(!viewerImages.length)return;$('#viewerImage').src=viewerImages[viewerIndex];$('#viewerCount').textContent=(viewerIndex+1)+' / '+viewerImages.length;$('#viewerThumbs').innerHTML='';viewerImages.forEach((src,i)=>{const b=document.createElement('button');b.type='button';b.className=i===viewerIndex?'selected':'';const img=document.createElement('img');img.src=src;img.alt='Billede '+(i+1);b.append(img);b.onclick=()=>{viewerIndex=i;showViewer()};$('#viewerThumbs').append(b)})}
+function openViewer(product){viewerImages=(product.images&&product.images.length?product.images:(product.src?[product.src]:[]));if(!viewerImages.length)return;viewerIndex=0;$('#viewerTitle').textContent=product.name;$('#productViewer').classList.add('show');showViewer()}
+$('#viewerClose').onclick=()=>$('#productViewer').classList.remove('show');
+$('#viewerPrev').onclick=()=>{viewerIndex=(viewerIndex-1+viewerImages.length)%viewerImages.length;showViewer()};
+$('#viewerNext').onclick=()=>{viewerIndex=(viewerIndex+1)%viewerImages.length;showViewer()};
+$('#productViewer').onclick=e=>{if(e.target.id==='productViewer')e.currentTarget.classList.remove('show')};
+document.addEventListener('keydown',e=>{if(!$('#productViewer').classList.contains('show'))return;if(e.key==='Escape')$('#productViewer').classList.remove('show');if(e.key==='ArrowLeft')$('#viewerPrev').click();if(e.key==='ArrowRight')$('#viewerNext').click()});
+
+$('#openLogin').addEventListener('click',()=>modal.classList.add('show'));
+$('#closeLogin').addEventListener('click',()=>modal.classList.remove('show'));
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')});
+function setAdmin(on){tools.classList.toggle('show',on);document.body.classList.toggle('admin-on',on);$('#openLogin').textContent=on?'Administrator aktiv':'Administrator login';if(on)$('#galleri').scrollIntoView({behavior:'smooth'});}
+$('#loginForm').addEventListener('submit',e=>{e.preventDefault();if($('#username').value==='admin'&&$('#password').value==='BLF2026'){setAdmin(true);modal.classList.remove('show');$('#loginStatus').textContent='';}else $('#loginStatus').textContent='Forkert brugernavn eller adgangskode.';});
+$('#logout').addEventListener('click',()=>setAdmin(false));
+const categories=['Hundeartikler','Jagtartikler','Schweissudstyr','Gaveartikler'];
+const samples=[
+['Combi hundeline','Hundeartikler'],['Dobbelt kobbel læder','Hundeartikler'],['Dressurline 20 mm x 250 cm','Hundeartikler'],
+['Geværrem læder 25 mm','Jagtartikler'],['Geværrem 30 mm læder','Jagtartikler'],['Fuglegalge','Jagtartikler'],
+['Schweissline læder','Schweissudstyr'],['Schweissline i 20 mm webbing','Schweissudstyr'],
+['Geværrem med præg – håndfarvet','Gaveartikler'],['Riffelrem med præg – håndfarvet','Gaveartikler']];
+let customProducts=[];try{customProducts=JSON.parse(localStorage.getItem('blfCatalogProducts')||'[]')}catch(e){}
+let filter='Alle';
+function renderCatalog(){grid.innerHTML='';const all=[...samples.map(([name,category])=>({name,category,description:'Håndlavet BLF Hunting-produkt. Spørg din lokale forhandler om detaljer.',src:'',sample:true})),...customProducts];
+all.filter(p=>filter==='Alle'||p.category===filter).forEach(p=>{const card=document.createElement('article');card.className='product-card';if(p.src||(p.images&&p.images.length)){const imageButton=document.createElement('button');imageButton.type='button';imageButton.className='product-photo-button';imageButton.setAttribute('aria-label','Se billeder af '+p.name);const img=document.createElement('img');img.src=(p.images&&p.images[0])||p.src;img.alt=p.name;imageButton.append(img);imageButton.onclick=()=>openViewer(p);card.append(imageButton)}else{const placeholder=document.createElement('div');placeholder.style.cssText='height:220px;background:linear-gradient(135deg,#2d3529,#171c15);display:grid;place-items:center;color:#c1a571;font-family:Georgia,serif;font-size:24px;text-align:center;padding:20px';placeholder.textContent='BLF HUNTING';card.append(placeholder)}const details=document.createElement('div');details.className='details';const cat=document.createElement('div');cat.className='cat';cat.textContent=p.category;const title=document.createElement('h3');title.textContent=p.name;const desc=document.createElement('p');desc.textContent=p.description;details.append(cat,title,desc);card.append(details);if(!p.sample){const edit=document.createElement('button');edit.className='edit-product';edit.textContent='Rediger';edit.onclick=()=>startEdit(p.id);card.append(edit);const del=document.createElement('button');del.className='delete-photo';del.textContent='Slet';del.onclick=()=>{customProducts=customProducts.filter(x=>x.id!==p.id);saveCatalog();renderCatalog()};card.append(del)}grid.append(card)})}
+function saveCatalog(){try{localStorage.setItem('blfCatalogProducts',JSON.stringify(customProducts))}catch(e){$('#uploadStatus').textContent='Ikke nok plads i browseren. Prøv et mindre billede.'}}
+$('#catalogFilters').addEventListener('click',e=>{const btn=e.target.closest('[data-filter]');if(!btn)return;filter=btn.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('btn-fill',x===btn));renderCatalog()});
+let pendingFiles=[],editingId=null,editingImages=[];
+function refreshExistingImages(){
+ const area=$('#existingImages');area.replaceChildren();area.style.display=editingId===null?'none':'block';
+ if(editingId===null)return;
+ const title=document.createElement('p');title.textContent='Eksisterende billeder (flyt eller fjern):';area.append(title);
+ editingImages.forEach((src,i)=>{
+ const wrap=document.createElement('div');wrap.style.cssText='display:inline-flex;flex-direction:column;gap:5px;padding:7px;margin:5px;border:1px solid var(--line)';
+ const img=document.createElement('img');img.src=src;img.style.cssText='width:100px;height:75px;object-fit:cover';wrap.append(img);
+ const row=document.createElement('div');
+ [['←',()=>{if(i>0){[editingImages[i-1],editingImages[i]]=[editingImages[i],editingImages[i-1]];refreshExistingImages()}}],
+ ['→',()=>{if(i<editingImages.length-1){[editingImages[i+1],editingImages[i]]=[editingImages[i],editingImages[i+1]];refreshExistingImages()}}],
+ ['Slet',()=>{editingImages.splice(i,1);refreshExistingImages()}]].forEach(([name,fn])=>{const b=document.createElement('button');b.type='button';b.textContent=name;b.style.cssText='padding:5px;cursor:pointer';b.onclick=fn;row.append(b)});
+ wrap.append(row);area.append(wrap);
+ });
+}
+function resetEditor(){
+ editingId=null;editingImages=[];pendingFiles=[];
+ $('#productName').value='';$('#photoCaption').value='';$('#photoUpload').value='';
+ $('#chosenFileName').textContent='Ingen billeder valgt';$('#savePhoto').textContent='Tilføj produkt';
+ $('#cancelEdit').style.display='none';refreshExistingImages();
+}
+function startEdit(id){
+ const item=customProducts.find(p=>p.id===id);if(!item)return;
+ editingId=id;editingImages=[...(item.images?.length?item.images:(item.src?[item.src]:[]))];pendingFiles=[];
+ $('#productName').value=item.name;$('#productCategory').value=item.category;$('#photoCaption').value=item.description||'';
+ $('#chosenFileName').textContent='Ingen nye billeder valgt';$('#savePhoto').textContent='Gem ændringer';
+ $('#cancelEdit').style.display='inline-block';$('#uploadStatus').textContent='Redigerer '+item.name;
+ refreshExistingImages();tools.scrollIntoView({behavior:'smooth'});
+}
+$('#cancelEdit').onclick=()=>{resetEditor();$('#uploadStatus').textContent='Redigering annulleret'};
+
+$('#photoUpload').addEventListener('change',()=>{
+ pendingFiles.push(...[...$('#photoUpload').files].filter(f=>f.type.startsWith('image/')));
+ $('#chosenFileName').textContent=pendingFiles.length+' billede(r) valgt – du kan vælge flere igen';
+ $('#photoUpload').value='';
+});
+
+$('#savePhoto').addEventListener('click',async()=>{
+ const files=[...pendingFiles];
+ const name=$('#productName').value.trim();
+ if(!name){$('#uploadStatus').textContent='Skriv produktnavn.';return}
+ if(!files.length && editingId===null){$('#uploadStatus').textContent='Vælg mindst ét produktbillede.';return}
+ const readFile=file=>new Promise((resolve,reject)=>{
+ const reader=new FileReader();
+ reader.onload=()=>{const image=new Image();image.onload=()=>{
+ const scale=Math.min(1,1100/Math.max(image.width,image.height));
+ const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(image.width*scale));canvas.height=Math.max(1,Math.round(image.height*scale));
+ canvas.getContext('2d').drawImage(image,0,0,canvas.width,canvas.height);
+ resolve(canvas.toDataURL('image/jpeg',0.7));
+ };image.onerror=reject;image.src=reader.result};
+ reader.onerror=reject;reader.readAsDataURL(file);
+});
+ try{
+ const added=await Promise.all(files.map(readFile));
+ const images=editingId===null?added:[...editingImages,...added];
+ const wasEditing=editingId!==null;
+ if(wasEditing){
+ const item=customProducts.find(p=>p.id===editingId);
+ if(item)Object.assign(item,{name,category:$('#productCategory').value,description:$('#photoCaption').value.trim(),src:images[0]||'',images});
+ }else customProducts.push({id:Date.now()+Math.random(),name,category:$('#productCategory').value,description:$('#photoCaption').value.trim(),src:images[0],images});
+ saveCatalog();filter='Alle';document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('btn-fill',x.dataset.filter==='Alle'));renderCatalog();
+ resetEditor();
+ $('#uploadStatus').textContent=(wasEditing?'Ændringer gemt. ':'Produkt oprettet. ')+images.length+' billede(r).';
+ }catch(e){$('#uploadStatus').textContent='Kunne ikke læse billederne.'}
+});
+
+renderCatalog();
+$('#contactForm').addEventListener('submit',e=>{e.preventDefault();$('#contactStatus').textContent='Tak! Formularen skal tilsluttes mail@blfhunting.dk på webhotellet for at sende beskeder.';});
+</script>
+</body></html>
